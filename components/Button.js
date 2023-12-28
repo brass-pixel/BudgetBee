@@ -1,15 +1,25 @@
 // Button.js
 
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
-import { buttonStyles } from './styles';
+import { Pressable, Text } from 'react-native';
+import { styles } from '../styles';
 
 
-const Button = ({ title, onPress }) => {
+const Button = ({ title, onPress, bgColor = "#FFC300", txtColour = "black"}) => {
+    // Event Handler
+    const handlePress = () => {
+        if (onPress) {
+            onPress();
+        }
+    };
+
     return (
-        <TouchableOpacity style={buttonStyles.buttonContainer} onPress={onPress}>
-            <Text style={buttonStyles.buttonText}>{title}</Text>
-        </TouchableOpacity>
+        <Pressable style={
+            [styles.buttonContainer, 
+            {backgroundColor: bgColor}]} 
+            onPress={handlePress}>
+            <Text style={[styles.buttonText, {color:txtColour}]}>{title}</Text>
+        </Pressable>
     )
 }
 
