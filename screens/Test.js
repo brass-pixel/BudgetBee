@@ -5,10 +5,17 @@ import Button from '../components/Button';
 import { styles } from '../styles';
 import Hyperlink from '../components/Hyperlink';
 import Input from '../components/Input';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
 
 const Test = () => {
   const handleButtonPress = () => {
     console.log('test');
+  };
+
+  const navigation = useNavigation();
+
+  const navigateToSignIn = () => {
+    navigation.navigate("Sign In");
   };
 
   return (
@@ -35,12 +42,17 @@ const Test = () => {
         ></View>
       </View>
 
-      <Input label="Test Label" placeholder="Test Placeholder" />
+      {/* Input Container */}
+      <View style={styles.rowContainer}>
+        <Input label="Test Label" placeholder="Test Placeholder" error='test'/>
+        <Input label=" " placeholder="Test Placeholder" />
+      </View>
 
+      {/* Button Container */}
       <View style={{ width: '100%', alignItems: 'flex-end', gap: 8 }}>
         <View style={styles.rowContainer}>
-          <Button title="Primary" onPress={handleButtonPress} />
-          <Button title="Secondary" onPress={handleButtonPress} />
+          <Button title="Primary" onPress={navigateToSignIn} />
+          <Button title="Secondary" onPress={handleButtonPress} bgColor='#92E1A4' />
         </View>
 
         <Hyperlink title="Test Link" page="link" />

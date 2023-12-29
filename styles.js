@@ -12,7 +12,12 @@ export const styles = StyleSheet.create({
     backgroundColor: '#f0f0f0',
     padding: 40,
   },
-
+  rowContainer: {
+    width: '100%',
+    flexDirection: 'row',
+    gap: '8px',
+    alignItems: 'center',
+  },
   // Text Font Styles
   text: {
     fontSize: 18,
@@ -26,18 +31,15 @@ export const styles = StyleSheet.create({
     fontFamily: 'Nunito-Bold',
     textAlign: 'center'
   },
-  rowContainer: {
-    width: '100%',
-    flexDirection: 'row',
-    gap: '8px',
-    alignItems: 'center',
-  },
+
 
   // Link Styles
   link: {
     color: '#0094FF',
     textDecorationLine: 'underline',
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    fontFamily: 'Nunito-Regular',
+
   },
 
   // Button Styles
@@ -51,7 +53,8 @@ export const styles = StyleSheet.create({
     backgroundColor: '#3498db',
     flex: 1,
     flexWrap: 'wrap',
-    flexGrow: 1
+    flexGrow: 1,
+    width: '100%',
   },
   buttonText: {
     fontSize: 20,
@@ -60,6 +63,9 @@ export const styles = StyleSheet.create({
   },
 
   // Input Styles
+  inputContainer: {
+    width: '100%',
+  },
   input: {
     fontSize: 16,
     height: 48,
@@ -67,12 +73,20 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderRadius: 4,
-    width: '100%',
+    fontFamily: 'Nunito-Regular',
+    flex: 1
   },
   label: {
     width: '100%',
-    fontSize: 14
+    fontSize: 16,
+    fontFamily: 'Nunito-Regular',
 
+  },
+  errorText: {
+    width: '100%', 
+    fontFamily: 'Nunito-Regular',
+    color: 'red',
+    textAlign: 'right',
   }
 });
 
