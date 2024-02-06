@@ -44,7 +44,7 @@ const Test = () => {
 
       {/* Input Container */}
       <View style={styles.rowContainer}>
-        <Input label="Test Label" placeholder="Test Placeholder" error='test'/>
+        <Input label="Test Label" placeholder="Test Placeholder"/>
         <Input label=" " placeholder="Test Placeholder" />
       </View>
 

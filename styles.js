@@ -65,6 +65,7 @@ export const styles = StyleSheet.create({
   // Input Styles
   inputContainer: {
     width: '100%',
+    flex: 1,
   },
   input: {
     fontSize: 16,
